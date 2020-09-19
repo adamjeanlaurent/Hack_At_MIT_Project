@@ -2,7 +2,102 @@
     width: 60%;
     padding: 20px;
     display: block;
+    margin: auto;
     margin-bottom: 25px;
-    margin-left: 20ch;
 }
 
+.btn.btn-flat {
+    border-radius: 0;
+    border: 2px solid;
+    background: transparent;
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
+}
+
+.btn-flat.btn-primary {
+    color: #007bff;
+    background: linear-gradient(30deg, #007bff 50%, transparent 50%);
+    background-position: right bottom;
+    background-size: 220% 100%;
+}
+
+.btn-flat.btn-primary:hover {
+    background-position: left bottom;
+    border: 2px solid #007bff;
+    color: #fff;
+}
+
+.btn-flat.btn-warning {
+    color: #ffc107;
+    background: linear-gradient(30deg, #ffc107 50%, transparent 50%);
+    background-position: right bottom;
+    background-size: 220% 100%;
+}
+
+.btn-flat.btn-warning:hover {
+    background-position: left bottom;
+    border: 2px solid #ffc107;
+    color: #fff;
+}
+
+
+.btn-flat.btn-success {
+    color: #28a745;
+    background: linear-gradient(30deg, #28a745 50%, transparent 50%);
+    background-position: right bottom;
+    background-size: 220% 100%;
+}
+
+.btn-flat.btn-success:hover {
+    background-position: left bottom;
+    border: 2px solid #28a745;
+    color: #fff;
+}
+
+
+.btn-flat.btn-info {
+    color: #17a2b8;
+    background: linear-gradient(30deg, #17a2b8 50%, transparent 50%);
+    background-position: right bottom;
+    background-size: 220% 100%;
+}
+
+.btn-flat.btn-info:hover {
+    background-position: left bottom;
+    border: 2px solid #17a2b8;
+    color: #fff;
+}
+
+
+.btn-flat.btn-info {
+    color: #17a2b8;
+    background: linear-gradient(30deg, #17a2b8 50%, transparent 50%);
+    background-position: right bottom;
+    background-size: 220% 100%;
+}
+
+.btn-flat.btn-danger {
+    color: #dc3545;
+    background: linear-gradient(30deg, #dc3545 50%, transparent 50%);
+    background-position: right bottom;
+    background-size: 220% 100%;
+}
+
+.btn-flat.btn-danger:hover {
+    background-position: left bottom;
+    border: 2px solid #dc3545;
+    color: #fff;
+}
+
+.btn-flat.btn-secondary {
+    color: #868e96;
+    background: linear-gradient(30deg, #868e96 50%, transparent 50%);
+    background-position: right bottom;
+    background-size: 220% 100%;
+}
+
+.btn-flat.btn-flat.btn-secondary:hover {
+    background-position: left bottom;
+    border: 2px solid #868e96;
+    color: #fff;
+}
