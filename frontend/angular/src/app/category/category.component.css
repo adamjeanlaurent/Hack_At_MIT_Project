@@ -28,15 +28,15 @@
 }
 
 .btn-flat.btn-warning {
-    color: #ffc107;
-    background: linear-gradient(30deg, #ffc107 50%, transparent 50%);
+    color: purple;
+    background: linear-gradient(30deg, purple 50%, transparent 50%);
     background-position: right bottom;
     background-size: 220% 100%;
 }
 
 .btn-flat.btn-warning:hover {
     background-position: left bottom;
-    border: 2px solid #ffc107;
+    border: 2px solid purple;
     color: #fff;
 }
 
@@ -90,14 +90,19 @@
 }
 
 .btn-flat.btn-secondary {
-    color: #868e96;
-    background: linear-gradient(30deg, #868e96 50%, transparent 50%);
+    color: darkgoldenrod;
+    background: linear-gradient(30deg, darkgoldenrod 50%, transparent 50%);
     background-position: right bottom;
     background-size: 220% 100%;
 }
 
 .btn-flat.btn-flat.btn-secondary:hover {
     background-position: left bottom;
-    border: 2px solid #868e96;
+    border: 2px solid darkgoldenrod;
     color: #fff;
+}
+
+.btn-flat {
+    background-color: rgb(197, 212, 226) !important;
+    opacity: 1;
 }
