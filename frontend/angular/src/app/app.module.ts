@@ -7,6 +7,8 @@ import { CategoryComponent } from './components/category/category.component';
 import { GridComponent } from './components/grid/grid.component';
 import { OrganizationComponent } from './components/organization/organization.component';
 
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { OrganizationComponent } from './components/organization/organization.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

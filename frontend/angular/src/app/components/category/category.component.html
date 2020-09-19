@@ -1,11 +1,15 @@
 <div class="container">
     <div class="row">
       <div class="col-sm">
-        <button type="button" class="btn btn-primary btn-lg btn-flat">Academic</button>
-        <button type="button" class="btn btn-warning btn-lg btn-flat">Leadership</button>
-        <button type="button" class="btn btn-success btn-lg btn-flat">Just For Fun</button>
-        <button type="button" class="btn btn-info btn-lg btn-flat">Creative Outlets</button>
-        <button type="button" class="btn btn-danger btn-lg btn-flat">Cultural, Religious & Social</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-flat">Community Service & Activism</button>
+        <button (click)="getOrgs('Academic')" type="button" class="btn btn-primary btn-lg btn-flat">Academic</button>
+        <button (click)="getOrgs('Leadership')" type="button" class="btn btn-warning btn-lg btn-flat">Leadership</button>
+        <button (click)="getOrgs('Just For Fun')" type="button" class="btn btn-success btn-lg btn-flat">Just For Fun</button>
+        <button (click)="getOrgs('Creative Outlets')" type="button" class="btn btn-info btn-lg btn-flat">Creative Outlets</button>
+        <button (click)="getOrgs('Cultural, Religious & Social')" type="button" class="btn btn-danger btn-lg btn-flat">Cultural, Religious & Social</button>
+        <button (click)="getOrgs('Community Service & Activism')" type="button" class="btn btn-secondary btn-lg btn-flat">Community Service & Activism</button>
     </div>
+    <div *ngFor="let org of orgs | async">
+      {{ org | json }}
+    </div>
+    
 </div>
