@@ -7,7 +7,13 @@ const username = process.env.DB_USER;
 const password = process.env.DB_PASSWORD;
 const uri = "mongodb+srv://" + username + ":" + password + "@cluster0.f1vj5.mongodb.net/" + dbname + "?retryWrites=true&w=majority";
 
-mongoose.connect(uri, { useNewUrlParser: true });
+
+try {
+  mongoose.connect(uri, { useNewUrlParser: true , useUnifiedTopology: true });
+  console.log("Auth succeeded!")
+} catch (error) {
+  console.log("Auth failed.")
+}
 
 module.exports = mongoose;
 
