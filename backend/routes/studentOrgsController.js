@@ -26,4 +26,21 @@ router.get('/', async (req, res) => {
     });
 });
 
+router.get('/:category', async (req, res) => {
+    const selectedCategory = req.params.category;
+    await console.log("Route started.");
+    let StudentOrgModel = mongoose.model('StudentOrg', studentOrgSchema);
+    await console.log("Model created.");
+
+    await StudentOrgModel.find({category:selectedCategory},function(err, data){
+        if(err){
+            console.log(err);
+            res.send("Category not found.");
+        } else {
+            console.log(data);
+            res.send(data);
+        }
+    });
+});
+
 module.exports = router;
