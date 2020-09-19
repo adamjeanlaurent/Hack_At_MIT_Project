@@ -3,9 +3,6 @@ const express = require('express');
 const cors = require('cors');
 
 // DB Connection
-const db = require("./db/db");
-const collection = "orgs";
-
 const studentOrgsController = require('./routes/studentOrgsController');
 
 const app = express();
