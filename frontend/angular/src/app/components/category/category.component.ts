@@ -16,8 +16,11 @@ export class CategoryComponent implements OnInit {
   readonly ROOT_URL = 'http://localhost:3000/'
 
   orgs: any;
+  show: boolean = true;
 
   getOrgs(category) {
+    this.show = false;
     this.orgs = this.http.get(this.ROOT_URL + 'api/studentOrgs/' + category);
+    this.orgs = JSON.parse(this.orgs);
   }
 }

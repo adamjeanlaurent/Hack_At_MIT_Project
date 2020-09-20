@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-      <div class="col-sm">
+      <div class="col-sm" [ngStyle]="{'display' : show ? 'initial' : 'none'}">
         <button (click)="getOrgs('Academic')" type="button" class="btn btn-primary btn-lg btn-flat">Academic</button>
         <button (click)="getOrgs('Leadership')" type="button" class="btn btn-warning btn-lg btn-flat">Leadership</button>
         <button (click)="getOrgs('Just For Fun')" type="button" class="btn btn-success btn-lg btn-flat">Just For Fun</button>
@@ -9,7 +9,8 @@
         <button (click)="getOrgs('Community Service & Activism')" type="button" class="btn btn-secondary btn-lg btn-flat">Community Service & Activism</button>
     </div>
     <div *ngFor="let org of orgs | async">
-      {{ org | json }}
+      <!-- {{ org | json }} -->
+      <h1>{{ org.name }}</h1>
     </div>
     
 </div>
