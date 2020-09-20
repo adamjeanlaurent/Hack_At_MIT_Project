@@ -1,0 +1,7 @@
+.jumbotron {
+    text-align: left;
+    background-image: url("../../../assets/img/logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(197, 212, 226);
+}

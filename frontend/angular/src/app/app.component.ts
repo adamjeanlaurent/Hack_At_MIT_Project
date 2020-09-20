@@ -7,7 +7,6 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = "Explore Different Organizations";
 
   readonly ROOT_URL = 'http://localhost:3000/'
 
