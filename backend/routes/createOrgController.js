@@ -13,13 +13,15 @@ router.get('/', async(req, res) => {
     const name = req.body.name;
     const desc = req.body.description;
     const category = req.body.category;
+    const iurl = req.body.imageURL;
 
     const StudentOrgModel = mongoose.model('StudentOrg', studentOrgSchema);
     
     const newStudentOrg = new StudentOrgModel({
         name: name,
         description: desc,
-        category: category
+        category: category,
+        imageURL: req.body.imageURL
     });
 
     newStudentOrg.save(function(err, data) {
