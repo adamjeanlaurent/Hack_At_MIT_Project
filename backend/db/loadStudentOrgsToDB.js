@@ -17,11 +17,25 @@ let loadStudentOrgsToDB = async () => {
         const newStudentOrg = new StudentOrgModel({
             name: s.name,
             description: s.description,
-            category: s.category
+            category: s.category,
+            imageURL: await getRandomImage(s.category)
         });
 
         newStudentOrg.save();
     }
 };
+
+let getRandomImage = async (category) => {
+    let u = 'https://source.unsplash.com/1600x900/?';
+    let oneWordCategory = '';
+    let space = category.indexOf(' ');
+    oneWordCategory = category.substring(0, space != -1 ? space : category.length);
+    oneWordCategory.replace(',', '');
+
+    u += oneWordCategory.toLowerCase();
+
+    let res = await fetch(u);
+    return res.url;
+}
 
 loadStudentOrgsToDB();
